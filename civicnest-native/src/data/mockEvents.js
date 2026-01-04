@@ -1,0 +1,42 @@
+export const mockEvents = [
+  {
+    id: 1,
+    title: "Community Coffee Hour",
+    date: "2026-01-10",
+    time: "10:00 AM",
+    location: "City Library, Main Room",
+    description: "Join your neighbors for coffee and conversation.",
+  },
+  {
+    id: 2,
+    title: "Senior Yoga in the Park",
+    date: "2026-01-12",
+    time: "9:00 AM",
+    location: "Lincoln Park Pavilion",
+    description: "Gentle yoga session with chairs available.",
+  },
+  {
+    id: 3,
+    title: "Town Hall Listening Session",
+    date: "2026-01-15",
+    time: "6:00 PM",
+    location: "City Hall, Room 204",
+    description: "Share your priorities with city leadership.",
+  },
+  {
+    id: 4,
+    title: "Neighborhood Safety Walk",
+    date: "2026-01-18",
+    time: "3:00 PM",
+    location: "Riverwalk Entrance",
+    description: "A guided walk with police and community volunteers.",
+  },
+  {
+    id: 5,
+    title: "Art & Memories Workshop",
+    date: "2026-01-20",
+    time: "1:00 PM",
+    location: "Senior Center, Studio 2",
+    description: "Create memory boxes and share stories.",
+  },
+];

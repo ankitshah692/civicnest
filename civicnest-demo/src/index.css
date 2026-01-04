@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-navy: #1a365d;
+  --primary-blue: #2c5282;
+  --accent-purple: #805ad5;
+  --accent-teal: #38b2ac;
+  --background-light: #e8eef4;
+  --background-white: #ffffff;
+  --text-primary: #1a365d;
+  --text-secondary: #4a5568;
+  --high-contrast-bg: #000000;
+  --high-contrast-text: #ffffff;
+  --success-green: #38a169;
+  --warning-orange: #dd6b20;
+  --font-scale: 1;
+}
+
+html {
+  font-size: calc(16px * var(--font-scale));
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Nunito", "Segoe UI", sans-serif;
+  color: var(--text-primary);
+  background: radial-gradient(circle at top, #f4f7fb 0%, var(--background-light) 55%, #dbe5f2 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 4px solid var(--accent-teal);
+  outline-offset: 2px;
+}
+
+.contrast-high body {
+  background: var(--high-contrast-bg);
+  color: var(--high-contrast-text);
+}
+
+.contrast-high .surface-panel {
+  background: #0d0d0d;
+  border-color: #ffffff;
+}
+
+.contrast-high .decorative-bg {
+  display: none;
+}
+
+.text-scale-regular {
+  --font-scale: 1;
+}
+
+.text-scale-large {
+  --font-scale: 1.15;
+}
+
+.text-scale-xlarge {
+  --font-scale: 1.3;
+}
+
+.big-button {
+  min-height: 64px;
+  min-width: 200px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.big-button:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.big-button:active {
+  transform: scale(0.98);
+}
+
+@media (min-width: 768px) {
+  body {
+    background: radial-gradient(circle at top left, #f9fbff 0%, var(--background-light) 55%, #d5e1f1 100%);
+  }
+}
