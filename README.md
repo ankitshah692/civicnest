@@ -5,9 +5,25 @@ CivicNest includes two demo apps:
 - `civicnest-native`: Expo / React Native demo for simulator and real device testing.
 
 ## Prerequisites
-- Node.js 18+ and npm
-- For iOS simulator: Xcode installed
-- For Android emulator: Android Studio + emulator setup
+- Node.js 18+ and npm (Windows users: install via https://nodejs.org/)
+- For iOS simulator: Xcode installed (macOS only)
+- For Android emulator: Android Studio + emulator setup (Windows/macOS)
+
+### Windows setup (fresh machine)
+
+1) Install Node.js LTS from https://nodejs.org/ (this includes `npm`).
+2) Install Git:
+   - If you use Git for Windows: https://git-scm.com/download/win
+   - If you use PortableGit, keep the folder and use `bin\\git.exe`.
+3) Close and reopen Command Prompt or PowerShell.
+4) Verify:
+   ```powershell
+   node -v
+   npm -v
+   git --version
+   ```
+
+If `npm` or `node` is not recognized, Node.js was not installed or the terminal was not restarted.
 
 ## Clone
 
