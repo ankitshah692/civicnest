@@ -12,6 +12,7 @@ import SurveysScreen from "./src/screens/SurveysScreen.js";
 import EventsScreen from "./src/screens/EventsScreen.js";
 import GetInvolvedScreen from "./src/screens/GetInvolvedScreen.js";
 import CaregiverScreen from "./src/screens/CaregiverScreen.js";
+import InfoScreen from "./src/screens/InfoScreen.js";
 
 const Stack = createNativeStackNavigator();
 
@@ -30,6 +31,7 @@ const App = () => {
             <Stack.Screen name="Surveys" component={SurveysScreen} />
             <Stack.Screen name="Events" component={EventsScreen} />
             <Stack.Screen name="GetInvolved" component={GetInvolvedScreen} />
+            <Stack.Screen name="Info" component={InfoScreen} />
             <Stack.Screen name="Caregiver" component={CaregiverScreen} />
           </Stack.Navigator>
         </NavigationContainer>

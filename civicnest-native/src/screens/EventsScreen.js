@@ -1,4 +1,4 @@
-import { View, Text, Pressable, StyleSheet } from "react-native";
+import { View, Text, Pressable, StyleSheet, Alert } from "react-native";
 import { useState } from "react";
 import ModeShell from "../components/common/ModeShell.js";
 import { mockEvents } from "../data/mockEvents.js";
@@ -52,10 +52,16 @@ const EventsScreen = () => {
           <Text style={[fonts.sm, styles.meta]}>{event.location}</Text>
           <Text style={[fonts.base, styles.subtitle]}>{event.description}</Text>
           <View style={styles.row}>
-            <Pressable style={styles.outlineButton}>
+            <Pressable
+              style={styles.outlineButton}
+              onPress={() => Alert.alert("Added to Calendar", `${event.title} was added.`)}
+            >
               <Text style={[fonts.sm, styles.outlineText]}>Add to Calendar</Text>
             </Pressable>
-            <Pressable style={styles.secondaryButton}>
+            <Pressable
+              style={styles.secondaryButton}
+              onPress={() => Alert.alert("Directions", `Opening directions to ${event.location}.`)}
+            >
               <Text style={[fonts.sm, styles.secondaryText]}>Get Directions</Text>
             </Pressable>
           </View>

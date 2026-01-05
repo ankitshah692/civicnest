@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import { View, Text, TextInput, Pressable, StyleSheet } from "react-native";
+import { View, Text, TextInput, Pressable, StyleSheet, Alert } from "react-native";
 import ModeShell from "../components/common/ModeShell.js";
 import ProgressIndicator from "../components/common/ProgressIndicator.js";
 import BigButton from "../components/common/BigButton.js";
@@ -63,7 +63,10 @@ const ReportIssueScreen = () => {
             value={formData.location}
             onChangeText={(value) => setFormData((prev) => ({ ...prev, location: value }))}
           />
-          <Pressable style={styles.secondaryChip}>
+          <Pressable
+            style={styles.secondaryChip}
+            onPress={() => Alert.alert("Location", "Using nearby kiosk location.")}
+          >
             <Text style={[fonts.sm, styles.secondaryText]}>Use my location</Text>
           </Pressable>
           <View style={styles.mapPlaceholder}>
