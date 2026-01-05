@@ -1,4 +1,4 @@
-import { Pressable, StyleSheet, Text } from "react-native";
+import { Alert, Pressable, StyleSheet, Text } from "react-native";
 import { colors, radius } from "../../theme.js";
 import useVoiceGuidance from "../../hooks/useVoiceGuidance.js";
 import { useAccessibility } from "../../context/AccessibilityContext.js";
@@ -6,12 +6,17 @@ import { getScale, textStyles } from "../../utils/typography.js";
 
 const AudioButton = ({ text, label = "Listen" }) => {
   const { textScale, highContrast } = useAccessibility();
-  const { speak, stop, isSpeaking, enabled } = useVoiceGuidance();
+  const { speak, stop, isSpeaking, enabled, available } = useVoiceGuidance();
   const scale = getScale(textScale);
   const fonts = textStyles(scale);
 
   const handlePress = () => {
     if (!enabled) {
+      Alert.alert("Voice guidance is off", "Turn on Voice in the header to listen.");
+      return;
+    }
+    if (!available) {
+      Alert.alert("Voice guidance unavailable", "No text-to-speech voice is available on this device.");
       return;
     }
     if (isSpeaking) {
